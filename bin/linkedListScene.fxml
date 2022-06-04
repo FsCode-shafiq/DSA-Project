@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080" prefWidth="1920" style="-fx-background-color: rgb(255,255,255);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LinkedListController">
+   <children>
+      <Pane fx:id="home" layoutY="26.0" prefHeight="684.0" prefWidth="1139.0">
+         <children>
+            <Text id="title" fill="#f57500" layoutX="713.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Linked List (Doubly) Data Structure">
+               <font>
+                  <Font name="Calibri" size="32.0" />
+               </font>
+            </Text>
+            <Accordion layoutX="1600" layoutY="51.0" prefHeight="659.0" prefWidth="298.0">
+              <panes>
+                <TitledPane animated="false" style="-fx-background-color: white;" text="Insert Node" textFill="#ff9305">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Text fill="#ff9200" layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Value:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="insertnode" layoutX="12.0" layoutY="59.0" prefHeight="29.0" prefWidth="273.0" />
+                              <Button layoutX="79.0" layoutY="117.0" mnemonicParsing="false" onAction="#insertnode" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: rgb(249,141,3);" text="Insert Node" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="10.0" style="-fx-background-color: rgb(249,141,3);" text="Insert At" textFill="#ff9305">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Text fill="#ff9200" layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Value:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="insertAtValue" layoutX="14.0" layoutY="54.0" prefHeight="29.0" prefWidth="273.0" />
+                              <Text fill="#ff9200" layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Position:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="insertAtPostion" layoutX="14.0" layoutY="132.0" prefHeight="29.0" prefWidth="273.0" />
+                              <Button layoutX="82.0" layoutY="185.0" mnemonicParsing="false" onAction="#insertAt" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: rgb(249,141,3);" text="Insert Node" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="637.0" style="-fx-background-color: rgb(249,141,3);" text="Insert First" textFill="#ff9305">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Text fill="#ff9200" layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Value:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="insertFirst" layoutX="14.0" layoutY="65.0" prefHeight="29.0" prefWidth="273.0" />
+                              <Button layoutX="82.0" layoutY="124.0" mnemonicParsing="false" onAction="#insertAtFirst" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: rgb(249,141,3);" text="Insert Node" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="74.0" style="-fx-background-color: rgb(249,141,3);" text="Remove (Position)" textFill="#ff9305">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Text fill="#ff9200" layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Position:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="removeAt" layoutX="17.0" layoutY="54.0" prefHeight="29.0" prefWidth="273.0" />
+                              <Button layoutX="80.0" layoutY="102.0" mnemonicParsing="false" onAction="#removeAt" prefHeight="40.0" prefWidth="148.0" style="-fx-background-color: rgb(249,141,3);" text="Remove Node" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="637.0" style="-fx-background-color: rgb(249,141,3);" text="Remove (Value)" textFill="#ff9305">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Text fill="#ff9200" layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Value:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="removeByValue" layoutX="14.0" layoutY="50.0" prefHeight="29.0" prefWidth="273.0" />
+                              <Button layoutX="77.0" layoutY="112.0" mnemonicParsing="false" onAction="#removeByValue" prefHeight="40.0" prefWidth="148.0" style="-fx-background-color: rgb(249,141,3);" text="Remove Node" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="637.0" style="-fx-background-color: rgb(249,141,3);" text="Remove First" textFill="#ff9305">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Button layoutX="27.0" layoutY="156.0" mnemonicParsing="false" onAction="#removeFirst" prefHeight="40.0" prefWidth="243.0" style="-fx-background-color: rgb(249,141,3);" text="Remove First Node" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="170.0" style="-fx-background-color: rgb(249,141,3);" text="Remove Last" textFill="#ff9305">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Button layoutX="27.0" layoutY="120.0" mnemonicParsing="false" onAction="#removeLast" prefHeight="40.0" prefWidth="243.0" style="-fx-background-color: rgb(249,141,3);" text="Remove Last Node" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="202.0" style="-fx-background-color: rgb(249,141,3);" text="Find(Value)" textFill="#ff9305">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Text fill="#ff9200" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Value:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="findByValue" layoutX="12.0" layoutY="47.0" prefHeight="29.0" prefWidth="273.0" />
+                              <Button layoutX="74.0" layoutY="97.0" mnemonicParsing="false" onAction="#findByValue" prefHeight="40.0" prefWidth="148.0" style="-fx-background-color: rgb(249,141,3);" text="Find" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="234.0" style="-fx-background-color: rgb(249,141,3);" text="FindKth" textFill="#ff9305">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <Text fill="#ff9200" layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Position:">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="findPosition" layoutX="14.0" layoutY="45.0" prefHeight="29.0" prefWidth="273.0" />
+                              <Button layoutX="74.0" layoutY="87.0" mnemonicParsing="false" onAction="#findByPosition" prefHeight="40.0" prefWidth="148.0" style="-fx-background-color: rgb(249,141,3);" text="Find" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Berlin Sans FB" size="17.0" />
+                     </font>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+            <Pane id="listcontainer" layoutY="215.0" prefHeight="200.0" prefWidth="841.0">
+
+            </Pane>
+         </children>
+      </Pane>
+      <Button layoutX="838.0" layoutY="672.0" mnemonicParsing="false" onAction="#clearList" prefHeight="51.0" prefWidth="254.0" style="-fx-background-color: rgb(249,141,3);" text="Clear List" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
