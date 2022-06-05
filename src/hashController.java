@@ -58,19 +58,19 @@ class hashTable {
             int newHash = 0;
             while (!terminator && attempt < tableSize) {
                 newHash = linearProbing(hash, attempt);
-                    if (isValid(newHash, key)) {
-                        hashArray[newHash] = -2;
-                        terminator = true;
-                        return true;
-                    } else {
-                        attempt++;
-                    }
+                if (isValid(newHash, key)) {
+                    hashArray[newHash] = -2;
+                    terminator = true;
+                    return true;
+                } else {
+                    attempt++;
+                }
             }
         }
         return false;
     }
 
-    public int search(int key){
+    public int search(int key) {
         int hash = divisionHash(key);
         if (isValid(hash, key)) {
             return hash;
@@ -80,11 +80,11 @@ class hashTable {
             int newHash = 0;
             while (!terminator && attempt < tableSize) {
                 newHash = linearProbing(hash, attempt);
-                    if (isValid(newHash, key)) {
-                        return newHash;
-                    } else {
-                        attempt++;
-                    }
+                if (isValid(newHash, key)) {
+                    return newHash;
+                } else {
+                    attempt++;
+                }
             }
         }
         return -1;
@@ -145,7 +145,7 @@ public class hashController {
         } else {
             int key = Integer.parseInt(value.getText());
             table.hash.Add(key);
-            updateGui(event , -1);
+            updateGui(event, -1);
         }
 
     }
@@ -171,9 +171,9 @@ public class hashController {
 
         int searchIndex = table.hash.search(key);
 
-        if(searchIndex != -1){
+        if (searchIndex != -1) {
             updateGui(event, searchIndex);
-        }else{
+        } else {
             String message = "Key not found in hash table";
             alertBox(message);
         }
@@ -200,16 +200,18 @@ public class hashController {
         hashPane = (Pane) scene.lookup("#hashPane");
         int layoutX = 0;
 
-        for (int i = 0 ; i < table.hash.hashArray.length ; i++) {
+        for (int i = 0; i < table.hash.hashArray.length; i++) {
             HBox hash = new HBox();
             hash.setLayoutX(layoutX);
             hash.setLayoutY(0);
             hash.setPrefWidth(100);
             hash.setPrefHeight(50);
-            if(searchIndex != i){
-                hash.setStyle("-fx-background-color: rgb(249,141,3);" + "-fx-border-width:1;" + "-fx-border-color: black");
-            }else{
-                hash.setStyle("-fx-background-color: rgb(13,141,3);" + "-fx-border-width:1;" + "-fx-border-color: black");
+            if (searchIndex != i) {
+                hash.setStyle(
+                        "-fx-background-color: rgb(249,141,3);" + "-fx-border-width:1;" + "-fx-border-color: black");
+            } else {
+                hash.setStyle(
+                        "-fx-background-color: rgb(13,141,3);" + "-fx-border-width:1;" + "-fx-border-color: black");
             }
             text = new Text();
             String Data = Integer.toString(table.hash.hashArray[i]);
@@ -233,8 +235,6 @@ public class hashController {
 
     }
 
-
-
     @FXML
     void alertBox(String message) {
 
@@ -242,6 +242,15 @@ public class hashController {
         alertBox.setContentText(message);
         alertBox.show();
 
+    }
+
+    @FXML
+    void Back(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("mainScene.fxml"));
+        stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

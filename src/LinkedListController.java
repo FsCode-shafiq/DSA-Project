@@ -183,7 +183,7 @@ class DoublyLinkedList {
 
     }
 
-    public void clearList(){
+    public void clearList() {
         Head = null;
         size = 0;
         UpdateList();
@@ -192,10 +192,9 @@ class DoublyLinkedList {
     void UpdateList() {
         if (size == 0) {
             NodeArray = null;
-        }else if(Head == null){
+        } else if (Head == null) {
             NodeArray = null;
-        }
-         else {
+        } else {
             Node[] tempList = new Node[size];
             Node start = Head;
             int index = 0;
@@ -352,13 +351,13 @@ public class LinkedListController {
     private TextField findPosition;
 
     @FXML
-    void findByPosition(ActionEvent event) throws IOException{
+    void findByPosition(ActionEvent event) throws IOException {
         int position = Integer.parseInt(findPosition.getText());
 
-        if(position == -1){
+        if (position == -1) {
             String message = "Invalid input please choose position between 1 to " + Doubly.List.size;
             alertBox(message);
-        }else{
+        } else {
             updateGui(Doubly.List.NodeArray, event, position);
         }
 
@@ -485,6 +484,15 @@ public class LinkedListController {
         alertBox.setContentText(message);
         alertBox.show();
 
+    }
+
+    @FXML
+    void Back(ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("mainScene.fxml"));
+        stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
