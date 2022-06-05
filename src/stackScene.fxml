@@ -46,5 +46,10 @@
          </font>
       </Label>
       <Pane fx:id="stackPane" layoutX="919.0" layoutY="204.0" prefHeight="851.0" prefWidth="221.0" />
+      <Button layoutX="1630.0" layoutY="543.0" mnemonicParsing="false" onAction="#Back" prefHeight="51.0" prefWidth="244.0" style="-fx-background-color: rgb(249,141,3);" text="Back" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
